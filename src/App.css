@@ -236,8 +236,7 @@ nav ul li a:active{
   padding:8px;
   margin-left: auto;
   margin-right: auto;
-
-  background-color:dodgerblue;
+  background-color:#4B4B4B;
   border-radius:30px;
 }
 .onethree{
@@ -384,4 +383,32 @@ padding:20px;
 .basic1:hover{
   border-color:rgba(0,0,0,.35);
   box-shadow:0 0 5px rgba(0,0,0,.2);
+}
+.liOne{
+  color: black;
+  text-decoration: none;
+}
+.liTwo{
+  color: black;
+  text-decoration: none;
+}
+.liThree{
+  color: black;
+  text-decoration: none;
+}
+.liFour{
+  color: black;
+  text-decoration: none;
+}
+.liOne:hover{
+  color:dodgerblue;
+}
+.liTwo:hover{
+  color:dodgerblue;
+}
+.liThree:hover{
+  color:dodgerblue;
+}
+.liFour:hover{
+  color: dodgerblue;
 }
