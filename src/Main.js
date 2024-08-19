@@ -32,34 +32,23 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isUser:false,
+      isUser: false,
       isRotate: false,
       isRotate1: false,
       isRotate2: false,
-   
       isPressed: false,
-  
       isPressed1: false,
-   
       isPressed2: false,
-     
       isPressed3: false,
-     
       isPressed4: false,
-     
       isPressed5: false,
-    
       isPressed6: false,
-  
       isPressed7: false,
-    
       isPressed8: false,
       isToDo: false,
       val: false
     }
-
   }
- 
   toDoFun = () => {
     if (!this.state.val) {
       this.setState({
@@ -74,7 +63,6 @@ export default class App extends Component {
       })
     }
   }
-
   onRotate = (e) => {
     if (e.target.value.length > 0) {
       this.setState({
@@ -119,16 +107,15 @@ export default class App extends Component {
     const buttonF11 = {
       cursor: 'pointer',
       color: 'white',
-      backgroundColor:'black',
+      backgroundColor: 'black',
       padding: '10px 16px 10px 16px',
       border: this.state.isPressed ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px',
-
     }
     const buttonF1 = {
       cursor: 'pointer',
       color: 'white',
-      backgroundColor:'black',
+      backgroundColor: 'black',
       padding: '10px 16px 10px 16px',
       border: this.state.isPressed1 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
@@ -136,7 +123,7 @@ export default class App extends Component {
     const buttonF2 = {
       cursor: 'pointer',
       color: 'white',
-      backgroundColor:'black',
+      backgroundColor: 'black',
       padding: '8px 16px 8px 16px',
       border: this.state.isPressed2 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
@@ -144,10 +131,9 @@ export default class App extends Component {
     const buttonF3 = {
       cursor: 'pointer',
       color: 'white',
-      backgroundColor:'black',
+      backgroundColor: 'black',
       padding: '0px 14px 0px 14px',
       fontSize: '10px',
-  
       border: this.state.isPressed3 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
     }
@@ -156,17 +142,16 @@ export default class App extends Component {
       color: 'white',
       padding: '0px 14px 0px 14px',
       fontSize: '10px',
-  backgroundColor:'black',
+      backgroundColor: 'black',
       border: this.state.isPressed4 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
     }
-
     const buttonF5 = {
       cursor: 'pointer',
       color: 'white',
       padding: '0px 14px 0px 14px',
       fontSize: '10px',
-  backgroundColor:'black',
+      backgroundColor: 'black',
       border: this.state.isPressed5 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
     }
@@ -175,7 +160,7 @@ export default class App extends Component {
       color: 'white',
       padding: '0px 14px 0px 14px',
       fontSize: '10px',
-  backgroundColor:'black',
+      backgroundColor: 'black',
       border: this.state.isPressed6 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
     }
@@ -184,7 +169,7 @@ export default class App extends Component {
       color: 'white',
       padding: '4px',
       fontSize: '10px',
-    backgroundColor:'black',
+      backgroundColor: 'black',
       border: this.state.isPressed7 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '100%'
     }
@@ -193,7 +178,7 @@ export default class App extends Component {
       color: 'white',
       padding: '5px 18px 5px 18px',
       fontSize: '20px',
-backgroundColor:'black',
+      backgroundColor: 'black',
       border: this.state.isPressed8 ? '1px solid #2f2f2f' : 'none',
       borderRadius: '38px'
     }
@@ -217,7 +202,6 @@ backgroundColor:'black',
       top: '15px',
       zIndex: '23'
     }
-
     const Rotate = {
       transform: this.state.isRotate ? 'rotate(180deg)' : 'rotate(0deg)'
     }
@@ -228,35 +212,32 @@ backgroundColor:'black',
       transform: this.state.isRotate2 ? 'rotate(180deg)' : 'rotate(0deg)'
     }
     const userr = {
-       width: '30px', height: '30px', 
-      display:this.state.isUser?'block':'none'
+      width: '30px', height: '30px',
+      display: this.state.isUser ? 'block' : 'none'
     }
-
     return (
-
       <>
         <div className="container">
           <div style={toDo} >
             <ul style={{ listStyle: 'none', padding: '12px', marginLeft: '20px', marginRight: '20px', textAlign: 'center' }}>
-            <li><a className='liOne' href="#">Discover</a></li><br />
-            <li><a className='liTwo' href="#">Community</a></li><br />
-            <li><a className='liThree' href="#">Special Deals</a></li><br />
-            <li><a className='liFour' href="#">About Us</a></li><br />
-            <li> < button type="button"
-              
-              onMouseDown={() => {
-                this.setState({
-                  isPressed: true
-                })
-              }}
-              onMouseUp={() => {
-                this.setState({
-                  isPressed: false
-                })
-              }}
-              style={buttonF11}>Register</button>
-            </li>
-          </ul></div>
+              <li><a className='liOne' href="#">Discover</a></li><br />
+              <li><a className='liTwo' href="#">Community</a></li><br />
+              <li><a className='liThree' href="#">Special Deals</a></li><br />
+              <li><a className='liFour' href="#">About Us</a></li><br />
+              <li> < button type="button"
+                onMouseDown={() => {
+                  this.setState({
+                    isPressed: true
+                  })
+                }}
+                onMouseUp={() => {
+                  this.setState({
+                    isPressed: false
+                  })
+                }}
+                style={buttonF11}>Register</button>
+              </li>
+            </ul></div>
           <nav>
             <h4 className='logo'>Mr.travel</h4>
             <div className='ulButOne'>
@@ -267,25 +248,24 @@ backgroundColor:'black',
                 <li><a className='liFour' href="#">About Us</a> </li>
               </ul>
               <div style={{ width: '60px', backgroundColor: 'whitesmoke', display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }} >
-                <img onMouseEnter={()=>{
+                <img onMouseEnter={() => {
                   this.setState({
-                    isHovered:true
+                    isHovered: true
                   })
                 }}
-                style={{width:'30px',height:'30px'}} src={user} alt='error' />
+                  style={{ width: '30px', height: '30px' }} src={user} alt='error' />
               </div> </div>
             <svg onClick={this.toDoFun} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="try bi bi-three-dots" viewBox="0 0 16 16">
               <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
             </svg>
           </nav>
-
-          <div style={appear} onMouseLeave={()=>{
+          <div style={appear} onMouseLeave={() => {
             this.setState({
-              isHovered:false
+              isHovered: false
             })
           }}>
-            <Link to='/Login' style={{  color: 'black' }}><div style={{ width: '86%', height: 'auto', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundColor: '#6f6f6f', padding: '7px', borderRadius:'9px' }}>Login</div></Link>
-            <Link to='/Login' style={{  color: 'black' }}><div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundColor: 'white', padding: '7px', borderRadius:'9px' }}>Sign Up</div>  </Link>
+            <Link to='/Login' style={{ color: 'black' }}><div style={{ width: '86%', height: 'auto', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundColor: '#6f6f6f', padding: '7px', borderRadius: '9px' }}>Login</div></Link>
+            <Link to='/Login' style={{ color: 'black' }}><div style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', backgroundColor: 'white', padding: '7px', borderRadius: '9px' }}>Sign Up</div>  </Link>
           </div>
           <div className='imgFit' >
             <div className='item1' style={item1}>
@@ -294,7 +274,6 @@ backgroundColor:'black',
               <br />
               <div style={{ height: '5vh', display: 'inline-block' }}>
                 <button type="button"
-                 
                   onMouseDown={() => {
                     this.setState({
                       isPressed1: true
@@ -317,7 +296,6 @@ backgroundColor:'black',
               <div className="item21"><h4 >People <span><i style={Rotate2} className="fa-solid fa-angle-up"></i></span></h4>
                 <input onChange={this.onRotate2} className='inOne' type="number" name="people" placeholder='Enter the number of people' /></div>
               <div style={{ height: '5vh', width: '9vw', grid: 'span 2' }}><button type="button"
-               
                 onMouseDown={() => {
                   this.setState({
                     isPressed2: true
@@ -330,7 +308,6 @@ backgroundColor:'black',
                 }}
                 style={buttonF2}>Explore Now</button></div>
             </div>
-
             <div style={{ position: 'relative', zIndex: '22', top: '15px', width: '92%', margin: '0 auto', textAlign: 'center' }}><p>Countries to travel</p><div style={{ width: '200px', margin: '0 auto' }}><hr></hr></div></div>
             <div className='one'>
             </div>
@@ -339,7 +316,7 @@ backgroundColor:'black',
               <div className="itemOne"><div><h4 className='item21'>INDIA <img src={india} alt="Error" style={{ width: '20px', height: 'auto', position: 'relative', top: '5px' }} /></h4></div>
                 <img src={indiaImg} alt="Error" style={{ width: '234.1px', height: '124px', borderRadius: '2px' }} />
                 <div className='itemOneOne' style={{ display: 'flex', justifyContent: 'space-between' }}><button type="button"
-                
+
                   onMouseDown={() => {
                     this.setState({
                       isPressed3: true
@@ -354,7 +331,6 @@ backgroundColor:'black',
               <div className="itemOne"><div><h4 className='item21'>UNITED STATE<img src={US} alt="Error" style={{ width: '20px', height: 'auto', position: 'relative', top: '5px', marginLeft: '5px' }} /></h4></div>
                 <img src={usa} alt="Error" style={{ width: '234.1px', height: '124px', borderRadius: '2px' }} />
                 <div className='itemOneOne' style={{ display: 'flex', justifyContent: 'space-between' }}><button type="button"
-                  
                   onMouseDown={() => {
                     this.setState({
                       isPressed4: true
@@ -369,7 +345,6 @@ backgroundColor:'black',
               <div className="itemOne"><div><h4 className='item21'>RUSSIA<img src={russia} alt="Error" style={{ width: '20px', height: 'auto', position: 'relative', top: '5px', marginLeft: '5px' }} /></h4></div>
                 <img src={russiaImg} alt="Error" style={{ width: '234.1px', height: '124px', borderRadius: '2px' }} />
                 <div className='itemOneOne' style={{ display: 'flex', justifyContent: 'space-between' }}><button type="button"
-                
                   onMouseDown={() => {
                     this.setState({
                       isPressed5: true
@@ -384,7 +359,6 @@ backgroundColor:'black',
               <div className="itemOne"><div><h4 className='item21'>SPAIN<img src={spain} alt="Error" style={{ width: '20px', height: 'auto', position: 'relative', top: '5px', marginLeft: '5px' }} /></h4></div>
                 <img src={spainImg} alt="Error" style={{ width: '234.1px', height: '124px', borderRadius: '2px' }} />
                 <div className='itemOneOne' style={{ display: 'flex', justifyContent: 'space-between' }}><button type="button"
-                 
                   onMouseDown={() => {
                     this.setState({
                       isPressed6: true
@@ -396,7 +370,6 @@ backgroundColor:'black',
                     })
                   }}
                   style={buttonF6}>Explore Now</button> <div><p className='oneP'>Barcelona</p><h4 style={{ fontSize: '15px' }}>$730</h4></div></div></div>
-
             </div>
             <div className="userVoice" >
               <div style={{ lineHeight: '60px', textAlign: 'center', color: 'white' }}><h1>Adventurer's Voices</h1>
@@ -501,7 +474,6 @@ backgroundColor:'black',
                     </h4>
                       <p style={{ fontWeight: '350' }}>Family Travel - 7 Min Read</p>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -515,11 +487,10 @@ backgroundColor:'black',
                 <div className='oneone'>
                   <div className='onetwo'>Lotus-Delhi</div></div>
                 <img src={lotus} alt="Error" className='imgOne' />
-                <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center',backgroundColor:'#4B4B4B' }}>
-                  <div style={{ display: 'flex'}}><div style={{ marginRight: '5px' }}><div>86415<i style={{ color: 'red' }} className="fa-solid fa-heart"></i></div>More Info</div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center', backgroundColor: '#4B4B4B' }}>
+                  <div style={{ display: 'flex' }}><div style={{ marginRight: '5px' }}><div>86415<i style={{ color: 'red' }} className="fa-solid fa-heart"></i></div>More Info</div>
                     <div><div>4586<i style={{ color: 'dodgerblue' }} className="fa-solid fa-comment"></i></div>$2848</div></div>
                   <div style={{ width: '40px', height: '40px', position: 'relative', top: '5px', right: '-5px' }}><button type='button'
-                   
                     onMouseDown={() => {
                       this.setState({
                         isPressed7: true
@@ -537,11 +508,10 @@ backgroundColor:'black',
                 <div className='oneone'>
                   <div className='onetwo'>Burj Khalifa-DXB</div></div>
                 <img src={burjkhalifa} alt="Error" className='imgOne' />
-                <div style={{ backgroundColor:'#4B4B4B',display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center' }}>
+                <div style={{ backgroundColor: '#4B4B4B', display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center' }}>
                   <div style={{ display: 'flex' }}><div style={{ marginRight: '5px' }}><div>86415<i style={{ color: 'red' }} className="fa-solid fa-heart"></i></div>More Info</div>
                     <div><div>4586<i style={{ color: 'dodgerblue' }} className="fa-solid fa-comment"></i></div>$2848</div></div>
                   <div style={{ width: '40px', height: '40px', position: 'relative', top: '5px', right: '-5px' }}><button type='button'
-                 
                     onMouseDown={() => {
                       this.setState({
                         isPressed7: true
@@ -559,11 +529,10 @@ backgroundColor:'black',
                 <div className="oneone"> <div className="onetwo">Piramids-Egypt</div>
                 </div>
                 <img src={piramids} alt="Error" className='imgOne' />
-                <div style={{backgroundColor:'#4B4B4B', display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center' }}>
+                <div style={{ backgroundColor: '#4B4B4B', display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', fontSize: '12px', alignItems: 'center' }}>
                   <div style={{ display: 'flex' }}><div style={{ marginRight: '5px' }}><div>86415<i style={{ color: 'red' }} className="fa-solid fa-heart"></i></div>More Info</div>
                     <div><div>4586<i style={{ color: 'dodgerblue' }} className="fa-solid fa-comment"></i></div>$2848</div></div>
                   <div style={{ width: '40px', height: '40px', position: 'relative', top: '5px', right: '-5px' }}><button type='button'
-                  
                     onMouseDown={() => {
                       this.setState({
                         isPressed7: true
@@ -576,16 +545,14 @@ backgroundColor:'black',
                     }}
                     style={buttonF7}>5 day <br />India</button></div>
                 </div>
-
               </div>
               <div className="chotaDbba" style={{ margin: 'auto', fontSize: '14px' }}>
                 <div className="oneone"><div className='onetwo'> Mountain-Vietnam</div></div>
                 <img src={mountain} alt="Error" className='imgOne' />
-                <div style={{backgroundColor:'#4B4B4B', display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', margin: 'auto', fontSize: '12px', alignItems: 'center' }}>
+                <div style={{ backgroundColor: '#4B4B4B', display: 'flex', justifyContent: 'space-between', position: 'relative', top: '-5px', width: 'auto', margin: 'auto', fontSize: '12px', alignItems: 'center' }}>
                   <div style={{ display: 'flex' }}><div style={{ marginRight: '5px' }}><div>86415<i style={{ color: 'red' }} className="fa-solid fa-heart"></i></div>More Info</div>
                     <div><div>4586<i style={{ color: 'dodgerblue' }} className="fa-solid fa-comment"></i></div>$2848</div></div>
                   <div style={{ width: '40px', height: '40px', position: 'relative', top: '5px', right: '-5px' }}><button type='button'
-                
                     onMouseDown={() => {
                       this.setState({
                         isPressed7: true
@@ -615,10 +582,8 @@ backgroundColor:'black',
                   <p>Included:Air ticket,Hotel,Breakfast,<br />Tours,Airport transfer</p>
                 </div>
                 <br />
-
                 <button
                   type='button'
-               
                   onMouseDown={() => {
                     this.setState({
                       isPressed8: true

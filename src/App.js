@@ -9,10 +9,10 @@ export default class App extends Component {
       <>
         <Router>
           <Routes>
-            <Route path='*' element={<Main/>}/>
-            <Route path='/Login' element={<Login/>}/>
-            <Route path='/Login1' element={<Login1/>}/>
-            </Routes>
+            <Route path='*' element={<Main />} />
+            <Route path='/Login' element={<Login />} />
+            <Route path='/Login1' element={<Login1 />} />
+          </Routes>
         </Router>
       </>
     )
